@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HW6</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Three.js core (CDN is fine) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- REMOVE this line (we use local ES module import in hw6.js) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script> -->
+  </head>
+  <body>
+
+    <!-- UI Container for Controls Instructions -->
+	<div id="controls-container">
+	<p><strong>Arrow Keys</strong> – Move ball (left/right/forward/back)</p>
+	<p><strong>W / S</strong> – Adjust shot power</p>
+	<p><strong>Space</strong> – Shoot toward nearest hoop</p>
+	<p><strong>R</strong> – Reset ball to center (power → 50%)</p>
+	<p><strong>C</strong> – Switch camera</p>
+	<p><strong>O</strong> – Toggle orbit controls</p>
+	<div id="controls-status" style="margin-top: 6px;">
+		<p><strong>LMB</strong> – Orbit &nbsp;|&nbsp; <strong>RMB</strong> – Pan &nbsp;|&nbsp; <strong>Scroll</strong> – Zoom</p>
+	</div>
+	</div>
+
+	<!-- Game Stats UI -->
+	<div id="stats-container">
+	<div class="stats-row">
+		<span>Score:</span> <strong id="stat-score">00</strong>
+	</div>
+	<div class="stats-row">
+		<span>Attempts:</span> <strong id="stat-attempts">0</strong>
+	</div>
+	<div class="stats-row">
+		<span>Made:</span> <strong id="stat-made">0</strong>
+	</div>
+	<div class="stats-row">
+		<span>Accuracy:</span> <strong id="stat-accuracy">0%</strong>
+	</div>
+	<div id="shot-message" class="shot-msg"> </div>
+	</div>
+
+
+
+	<!-- Shot Power UI -->
+	<div id="power-container">
+	<div class="power-label">
+		Shot Power: <span id="power-value">50%</span>
+	</div>
+	<div id="power-bar">
+		<div id="power-fill" style="width: 50%"></div>
+	</div>
+	<div class="power-hint">W: increase • S: decrease</div>
+	</div>
+
+    <!-- Main app (module) -->
+    <script type="module" src="./src/hw6.js"></script>
+
+  </body>
+</html>
