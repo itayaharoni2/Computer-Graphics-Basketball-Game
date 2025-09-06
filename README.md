@@ -162,6 +162,6 @@ Tune **power feel** (in `hw6.js`): `POWER_SPEED` and default power on reset.
 
 ## Video
 
--- click the picture to watch the video:
+- click the picture to watch the video:
 
 [![Watch the demo](https://img.youtube.com/vi/ObtrQMPlvDI/hqdefault.jpg)](https://youtu.be/ObtrQMPlvDI)
